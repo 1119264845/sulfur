@@ -1,0 +1,1 @@
+INSERT INTO `sulfur`.`pro_version`(`content`, `type`) VALUES ('测试数据', 'test');
