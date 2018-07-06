@@ -4,9 +4,9 @@ import com.elfop.sulfur.dao.bean.ProVersion;
 import com.elfop.sulfur.dao.bean.ProVersionExample;
 import com.elfop.sulfur.dao.mapper.ProVersionMapper;
 import com.github.pagehelper.PageHelper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -19,14 +19,15 @@ import java.util.List;
 @Service
 public class VersionServiceImpl implements VersionService{
 
-    @Autowired
-    ProVersionMapper versionMapper;
+    @Resource
+    private ProVersionMapper versionMapper;
 
     @Override
     public List<ProVersion> getProVersionAll(String type,int page,int size){
         PageHelper.startPage(page, size);
         ProVersionExample example = new ProVersionExample();
         example.or().andTypeEqualTo(type);
+        example.setOrderByClause("utime DESC");
         return versionMapper.selectByExample(example);
     }
 
