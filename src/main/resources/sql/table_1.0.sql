@@ -6,3 +6,13 @@ CREATE TABLE `pro_version` (
   `utime` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6) COMMENT '更新时间',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+##坐标预加载
+
+CREATE TABLE nested_category (
+        category_id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(20) NOT NULL,
+        lft INT NOT NULL,
+        rgt INT NOT NULL
+);
