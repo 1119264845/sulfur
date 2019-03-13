@@ -1,11 +1,8 @@
 package com.elfop.sulfur.web.control;
 
-import com.alibaba.fastjson.JSON;
-import com.elfop.sulfur.dao.mapper.ProVersionMapper;
+import com.elfop.sulfur.common.WebResult;
 import com.elfop.sulfur.service.VersionService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Primary;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,8 +27,8 @@ public class VersionController {
     private VersionService versionService;
 
     @PostMapping(value = "/type")
-    public String getVersion(@RequestParam String type,@RequestParam int page,@RequestParam int size){
-        return JSON.toJSONString(versionService.getProVersionAll(type,page,size));
+    public WebResult getVersion(@RequestParam String type, @RequestParam int page, @RequestParam int size) {
+        return WebResult.okResult(versionService.getProVersionAll(type, page, size));
     }
 
 }

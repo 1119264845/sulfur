@@ -1,8 +1,7 @@
 package com.elfop.sulfur.service;
 
 import com.elfop.sulfur.dao.bean.ProVersion;
-
-import java.util.List;
+import com.elfop.sulfur.web.vo.ResultsVo;
 
 /**
  * @Description:
@@ -12,5 +11,6 @@ import java.util.List;
  * @Date: 2018-07-05 11:43
  */
 public interface VersionService {
-    List<ProVersion> getProVersionAll(String type, int page, int size);
+
+    ResultsVo<ProVersion> getProVersionAll(String type, int page, int size);
 }
