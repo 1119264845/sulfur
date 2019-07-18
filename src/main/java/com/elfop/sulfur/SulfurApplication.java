@@ -5,7 +5,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-
 /**
  * @Description:
  * @author: liu zhenming
@@ -14,12 +13,13 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  */
 @EnableScheduling
 @SpringBootApplication
-@MapperScan(value = "com.elfop.sulfur.dao.mapper")
+@MapperScan(basePackages = "com.elfop.sulfur.**.mapper")
 public class SulfurApplication {
+
 
     public static void main(String[] args) {
         SpringApplication.run(SulfurApplication.class, args);
     }
 
-}
 
+}

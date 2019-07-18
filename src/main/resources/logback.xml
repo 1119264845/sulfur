@@ -94,8 +94,8 @@
     </logger>
 
     <!--<logger name="com.elfop.sulfur.task" additivity="false" level="debug">-->
-        <!--<appender-ref ref="monitor"/>-->
-        <!--<appender-ref ref="console"/>-->
+    <!--<appender-ref ref="monitor"/>-->
+    <!--<appender-ref ref="console"/>-->
     <!--</logger>-->
 
 
