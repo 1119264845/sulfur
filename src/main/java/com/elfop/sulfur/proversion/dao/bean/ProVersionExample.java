@@ -1,4 +1,4 @@
-package com.elfop.sulfur.dao.bean;
+package com.elfop.sulfur.proversion.dao.bean;
 
 import java.util.ArrayList;
 import java.util.Date;

@@ -24,7 +24,7 @@
     </plugins>
 
     <mappers>
-        <package name="com.elfop.sulfur.dao.mapper"/>
+        <package name="com.elfop.sulfur.proversion.dao.mapper"/>
     </mappers>
 
     <!-- Continue editing here -->
